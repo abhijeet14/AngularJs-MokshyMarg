@@ -288,3 +288,8 @@
   float: right;
   font-size: 12px;
 }
+
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+  color: white; }
+  
+  
