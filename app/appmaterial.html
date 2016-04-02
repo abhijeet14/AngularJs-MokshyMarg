@@ -19,17 +19,28 @@
     <script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
 
   </head>
-  <body layout="row" ng-controller="AppCtrl">
+  <body layout="row" layout-align="start center" ng-controller="AppCtrl">
+   	
     <md-sidenav  class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-      <md-toolbar class="md-tall md-hue-2">
-
+	
+	 <md-content class="card" layout-xs="column" layout="row">    
+	 <div flex-xs flex-gt-xs="200" layout="column">
+      <md-card>
+	   <img ng-src="img/mahavir.jpg" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          </md-card-title>
+		</md-card>
+		
+		</div>
+		</md-content>
+     <!-- <md-toolbar class="md-hue-2">
         <div layout="column" class="md-toolbar-tools-bottom inset">
           <user-avatar></user-avatar>
           <span></span>
           <div>Firstname Lastname</div>
           <div>email@domainname.com</div>
         </div>
-      </md-toolbar>
+      </md-toolbar> -->
       <md-list>
       <md-item  ng-repeat="item in menu">
           <md-item-content >
@@ -64,11 +75,12 @@
       </md-button>
       <md-toolbar ng-show="!showSearch">
         <div class="md-toolbar-tools">
-          <md-button ng-click="toggleSidenav('left')"  aria-label="Menu">
+	      <md-button class="md-icon-button" ng-click="toggleSidenav('left')"  aria-label="Menu">
             <ng-md-icon icon="menu"></ng-md-icon>
           </md-button>
+		  <span flex></span>	
           <h3>
-            Dashboard
+            <span>Mokshay Marg</span>
           </h3>
           <span flex></span>
           <md-button aria-label="Search" ng-click="showSearch = !showSearch">
